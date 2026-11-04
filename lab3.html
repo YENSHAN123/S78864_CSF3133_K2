@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form and Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header, .content, .footer {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #d9eaf7;
+        }
+
+        h1 {
+            color: #234567;
+        }
+
+        input {
+            margin: 8px 0;
+            padding: 8px;
+        }
+
+        button {
+            background-color: #234567;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #456789;
+        }
+
+        .calculator {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #eeeeee;
+            border-radius: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #d9eaf7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <h1>Welcome to My Website</h1>
+        <span>Your Feedback Matters to Us!</span>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+
+        <h2>Contact Form</h2>
+
+        <form>
+            <!-- email -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+            <br><br>
+
+            <!-- date -->
+            <label for="date">Preferred Contact Date:</label><br>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+
+            <!-- range slider -->
+            <label for="satisfaction">
+                Satisfaction Level (1-10):
+            </label><br>
+
+            <input type="range" id="satisfaction"
+                   name="satisfaction" min="1" max="10" value="5"
+                   oninput="level.value = this.value">
+
+            <output id="level">5</output>
+            <br><br>
+
+            <!-- submit button -->
+            <button type="submit">Submit</button>
+        </form>
+
+        <hr>
+
+        <!-- incline calculator -->
+        <div class="calculator">
+
+            <h2>Simple Calculator</h2>
+
+            <label for="num1">First Number:</label><br>
+            <input type="number" id="num1" placeholder="Enter first number">
+            <br><br>
+
+            <label for="num2">Second Number:</label><br>
+            <input type="number" id="num2" placeholder="Enter second number">
+            <br><br>
+
+            <button type="button" onclick="calculateSum()">
+                Calculate Sum
+            </button>
+
+            <h3>Sum: <output id="result">0</output></h3>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <p>Contact Us: lab3@email.com</p>
+        <p>Phone: 012-3456789</p>
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </div>
+
+    <!-- javascript for calculator -->
+    <script>
+        function calculateSum() {
+            let number1 = parseFloat(document.getElementById("num1").value) || 0;
+            let number2 = parseFloat(document.getElementById("num2").value) || 0;
+
+            let sum = number1 + number2;
+
+            document.getElementById("result").value = sum;
+        }
+    </script>
+
+</body>
+</html>
