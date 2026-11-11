@@ -1,0 +1,251 @@
+/* ===================================================
+   Global Styles & Reset
+   =================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===================================================
+   Header & Navigation Bar
+   =================================================== */
+header {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Unordered list styled as navigation bar */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+}
+
+/* ===================================================
+   Links & Pseudo-classes (:hover, :visited, :active)
+   =================================================== */
+.nav-link {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #38bdf8;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link:visited {
+    color: #cbd5e1;
+}
+
+.nav-link:active {
+    color: #f59e0b;
+    transform: scale(0.97);
+}
+
+.back-to-top {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+.back-to-top:hover {
+    color: #1d4ed8;
+}
+
+.back-to-top:active {
+    color: #ef4444;
+}
+
+/* ===================================================
+   Text Decorations for Headings
+   =================================================== */
+.heading-underline {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #6366f1;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: #0f172a;
+}
+
+/* ===================================================
+   Layout Sections & Cards
+   =================================================== */
+.page-section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1.75rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+}
+
+/* ===================================================
+   Video Styling
+   =================================================== */
+.video-wrapper {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.video-caption {
+    font-size: 0.50rem;
+    color: #64748b;
+    margin-top: 0.6rem;
+    font-style: italic;
+}
+
+/* ===================================================
+   Form Styling
+   =================================================== */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border: none;
+    padding: 0;
+}
+
+.form-group label,
+fieldset legend {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+fieldset {
+    padding: 0.75rem 0;
+}
+
+.options-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 0.35rem;
+}
+
+.radio-label,
+.checkbox-label {
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.submit-btn {
+    align-self: flex-start;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #4338ca;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* ===================================================
+   Footer Styling
+   =================================================== */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}

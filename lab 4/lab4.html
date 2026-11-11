@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 4 - Responsive Webpage</title>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS (Requirement 4: Use both internal and external CSS) -->
+    <style>
+        /* Specific page adjustments via internal CSS */
+        .internal-accent {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .heading-overline {
+            text-decoration: overline;
+            color: #1e293b;
+        }
+
+        .discount-note {
+            text-decoration: line-through;
+            color: #ef4444;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="top">
+        <div class="container header-container">
+            <h1 class="site-title">CAT SHELTER CARE FOR ALL</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#media" class="nav-link">Featured Video</a></li>
+                    <li><a href="#contact" class="nav-link">Volunteer Registration</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section: About / Articles -->
+        <section id="about" class="page-section">
+            <h2 class="section-title heading-underline">About Our Website</h2>
+            
+            <article class="card">
+                <h3>Life Of Cats</h3>
+                <p>
+                    Cats are fascinating creatures that have captivated humans for thousands of years. From their mysterious behaviors to their playful antics, cats bring joy and companionship to millions of households worldwide. This website is dedicated to exploring the world of cats, providing insights into their care, behavior, and the unique bond they share with humans.
+                </p>
+                <p>Come join us to take care of them together!</p>
+                <div class="internal-accent">
+                    <p><strong>Note:</strong> Registration fee: <span class="discount-note">RM 15</span> <strong>Free for students!</strong></p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Section: Media -->
+        <section id="media" class="page-section">
+            <h2 class="section-title heading-overline">Featured Media</h2>
+            <article class="card">
+                <h3>Cat Video Showcase</h3>
+                <p>Watch the documentary about cats.</p>
+                
+                <div class="video-wrapper">
+                    <video controls width="150%" poster="cat.jpg">
+                        <source src="video.mp4" type="video/mp4">
+                        
+                        <!-- Closed Captions (WebVTT Track) -->
+                        <track label="English" kind="subtitles" srclang="en" src="captions.vtt" default>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <figcaption class="video-caption">
+                    Figure 1.1: Demo clip embedded with native HTML5 controls and accessibility captions.
+                </figcaption>
+            </article>
+        </section>
+
+        <!-- Section: Interactive Elements (Form) -->
+        <section id="contact" class="page-section">
+            <h2 class="section-title heading-underline">Volunteer Registration Form</h2>
+            
+            <form action="#" method="POST" class="styled-form card">
+                <!-- Text Input: Name -->
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                </div>
+
+                <!-- Text Input: Email -->
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                </div>
+
+                <!-- Radio Buttons: Gender -->
+                <fieldset class="form-group">
+                    <legend>Gender</legend>
+                    <div class="options-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" required> Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="other"> Other
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Checkboxes: Favorite Hobbies -->
+                <fieldset class="form-group">
+                    <legend>Favorite Hobbies</legend>
+                    <div class="options-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="hobbies" value="coding"> Coding
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="hobbies" value="reading"> Reading
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="hobbies" value="gaming"> Gaming
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="hobbies" value="music"> Music
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Lab Exercise 4. All rights reserved.</p>
+            <p><a href="#top" class="back-to-top">Back to top &uarr;</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
