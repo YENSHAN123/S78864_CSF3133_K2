@@ -1,0 +1,118 @@
+/* General Body & Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #3b1e54; /* UMT Purple */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1rem;
+    color: #e2e8f0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #1e293b;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f59e0b; /* Gold Accent on Hover */
+    color: #111111;
+}
+
+/* Main Content & Spacing */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+article {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+article h2, article h3 {
+    color: #3b1e54;
+    margin-top: 0;
+}
+
+article p {
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #cbd5e1;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #3b1e54;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #e2e8f0;
+    color: #334155;
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
